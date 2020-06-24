@@ -18,7 +18,7 @@ const TodoList = () => {
     setTodos((todos) =>
       todos.map((todo) => {
         if (todo.id === id) {
-          let newTodo = { ...todo, task: updatedTodo };
+          let newTodo = { ...todo, text: updatedTodo };
           return newTodo;
         }
         return todo;
