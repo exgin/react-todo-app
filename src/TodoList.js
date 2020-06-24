@@ -15,7 +15,15 @@ const TodoList = () => {
   // pass down to Todo | within the todo's array, map over & match the id to the one passed in, if correct
   //   .... set the task, which is our text, to the updated task. ELSE ignore and return todo
   const editTodo = (id, updatedTodo) => {
-    setTodos((todos) => todos.map((todo) => (todo.id === id ? { ...todo, task: updatedTodo } : todo)));
+    setTodos((todos) =>
+      todos.map((todo) => {
+        if (todo.id === id) {
+          let newTodo = { ...todo, task: updatedTodo };
+          return newTodo;
+        }
+        return todo;
+      })
+    );
   };
 
   //   pass down to TodoList

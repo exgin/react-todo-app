@@ -18,9 +18,9 @@ const Todo = ({ id, task, removeTodo, editTodo }) => {
   };
 
   //   add edit fn
-  const handleEdit = (e) => {
+  const handleEditSubmit = (e) => {
     e.preventDefault();
-    editTodo(id, updateTask);
+    editTodo(id, updateTask); // should work just like addTodo()
     setEditing(false);
   };
 
@@ -47,7 +47,7 @@ const Todo = ({ id, task, removeTodo, editTodo }) => {
   if (editing === true) {
     todoTask = (
       <div className='Todo'>
-        <form onSubmit={handleEdit}>
+        <form onSubmit={handleEditSubmit}>
           <label htmlFor='edit-todo'>Editing now</label>
           <input id='edit-todo' name='edit-todo' value={updateTask} onChange={handleText} />
           <button>Edit!</button>
