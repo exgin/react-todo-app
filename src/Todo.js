@@ -48,12 +48,13 @@ const Todo = ({ id, task, removeTodo, editTodo }) => {
     todoTask = (
       <div className='Todo'>
         <form onSubmit={handleEdit}>
-          <label htmlFor='edit-todo'></label>
+          <label htmlFor='edit-todo'>Editing now</label>
           <input id='edit-todo' name='edit-todo' value={updateTask} onChange={handleText} />
           <button>Edit!</button>
         </form>
       </div>
     );
+    return todoTask;
   }
 
   return todoTask;

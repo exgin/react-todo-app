@@ -17,7 +17,7 @@ const NewTodoForm = ({ addTodo }) => {
   };
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor='text'>Enter Text Here</label>;
+      <label htmlFor='text'>Enter Text Here</label>
       <input id='text' name='text' value={formData.text} onChange={handleChange} />
       <button>Add task</button>
     </form>
